@@ -1,3 +1,5 @@
+//clasificacion de calificaciones
+
 let calificacion = parseInt(prompt("Ingrese la calificacion del alumno"))
 
 if (calificacion <=5 ){

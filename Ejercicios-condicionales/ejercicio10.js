@@ -1,3 +1,5 @@
+//comprobadora de usuario y contraseña ya registrado
+
 let usuario1 = "nahuel123"
 let contraseña1 = "nahuel123"
 let usuario = prompt("Ingrese su usuario");

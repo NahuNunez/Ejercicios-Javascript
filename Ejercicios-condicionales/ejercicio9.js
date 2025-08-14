@@ -1,3 +1,5 @@
+//calculadora de descuento, 10% de descuento si la compra supera los $100
+
 let compra = parseInt(prompt("Ingrese el costo de su compra"))
 let descuento = compra * 0.10
 let total = (compra - descuento)
