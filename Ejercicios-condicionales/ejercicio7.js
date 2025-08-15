@@ -1,3 +1,5 @@
+//Ingresar un año y verificar si es bisiesto o no
+
 let ano = parseInt(prompt("Ingrese un año"))
 
 if (ano % 4 == 0){
