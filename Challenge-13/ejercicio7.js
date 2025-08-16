@@ -36,9 +36,16 @@ do {
 
 let imc = peso / (altura ** 2)
 
-/* if () {
-    
-} else {
-    
-} */
+if (imc <= 18.5) {
+    alert(`El Indice de Masa Corporal (IMC) de su peso (${peso}) y su altura (${altura}) es : ${imc} \nSu peso es Bajo `)
+} 
+else if (imc >= 18.5 && imc <= 24.99) {
+    alert(`El Indice de Masa Corporal (IMC) de su peso (${peso}) y su altura (${altura}) es : ${imc} \nSu peso es Normal `)
+}
+else if (imc >= 25) {
+    alert(`El Indice de Masa Corporal (IMC) de su peso (${peso}) y su altura (${altura}) es : ${imc} \nSu peso es Alto `)
+}
+else {
+   alert("valores demasiado altos")
+}
                                                     
