@@ -110,7 +110,7 @@ else if (mes === "diciembre" && dia >= 1 && dia <= 21 ){
     alert("Su signo zodiacal es Sagitario")
 }
 else  {
-    alert("Error Desconocido")
+    alert("Probablemente ingresaste mal un mes, corrobóralo")
 }
 
 
