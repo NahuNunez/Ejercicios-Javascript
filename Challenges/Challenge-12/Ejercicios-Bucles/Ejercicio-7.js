@@ -12,5 +12,5 @@ while (total < 100) {
     
 }
 
-alert(`¡Felicidades! El total final es: ${total}`);
+alert(`El total final es: ${total}`);
 
