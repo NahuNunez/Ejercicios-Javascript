@@ -1,10 +1,5 @@
 
 
-//Crear un array solo con nombres y carreras
-
-//Filtrar estudiantes de Ingeniería mayores de 19 años
-
-//Encontrar al estudiante con ID 3
 
 
 const estudiantes = [ 
@@ -23,3 +18,30 @@ const PromedioMayor = estudiantes.filter((valor) => valor.promedio > 8.0)
 console.log(PromedioMayor);
 
 
+
+//Ejercicio 2
+//Crear un array solo con nombres y carreras
+
+const NombresyCarreras = estudiantes.map(function (valor) {
+    return {nombre: valor.nombre , carrera: valor.carrera}
+})
+
+console.log(NombresyCarreras);
+
+
+
+//Ejercicio 3
+//Filtrar estudiantes de Ingeniería mayores de 19 años
+
+const IngenieriaMayor = estudiantes.filter( (valor) => valor.carrera === "Ingeniería" && valor.edad > 19 )
+
+console.log(IngenieriaMayor);
+
+
+
+//Ejercicio 4
+//Encontrar al estudiante con ID 3
+
+const EncontrarID = estudiantes.find((valor) => valor.id === 3)
+
+console.log(EncontrarID);
