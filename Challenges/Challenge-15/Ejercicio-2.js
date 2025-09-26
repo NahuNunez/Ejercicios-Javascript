@@ -21,3 +21,5 @@ const estudiantes = [
 const PromedioMayor = estudiantes.filter((valor) => valor.promedio > 8.0)
 
 console.log(PromedioMayor);
+
+

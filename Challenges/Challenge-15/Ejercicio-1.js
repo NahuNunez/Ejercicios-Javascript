@@ -7,8 +7,8 @@ const productos =  [
 { id: 5, nombre: "Teclado", precio: 45, categoria: "tecnologia", stock: 0 } ]
 
 
-
-//1 Mostrar todos los productos que tienen stock disponible
+//Ejercicio 1
+//Mostrar todos los productos que tienen stock disponible
 
 const stockDisponible = productos.filter(function (producto) {
     return producto.stock > 0
@@ -18,7 +18,8 @@ console.log(stockDisponible)
 
 
 
-//2 Crear un array solo con los nombres y precios de los productos
+//Ejercicio 2
+//2Crear un array solo con los nombres y precios de los productos
 
 const arrayNuevo = productos.map(function (producto) {
     return {nombre: producto.nombre , precio: producto.precio}
@@ -28,7 +29,8 @@ console.log(arrayNuevo);
 
 
 
-//3 Filtrar los productos de tecnología que tienen stock
+//Ejercicio 3
+//Filtrar los productos de tecnología que tienen stock
 
 const stocktech = productos.filter((producto) => producto.categoria === "tecnologia" && producto.stock > 0)
 
@@ -40,7 +42,8 @@ console.log(stocktech);
 
 
 
-//4 Encontrar el producto llamado "Monitor"
+//Ejercicio 4
+//Encontrar el producto llamado "Monitor"
 
 const EncontrarMonitor = productos.find((producto) => producto.nombre === "Monitor")
 
