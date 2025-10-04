@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" >    <!-- data-bs-theme="dark" id="HTMLdoc"-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Challenge 16">
+    <meta name="keywords" content="challenge, 16">
+    <title>Challenge 16</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+<body data-bs-theme="dark" >
+
+    <header></header>
+
+    <main class="container">
+        <section class="text-center">
+            <h1 class="display-4 my-5" >El número actual es: <span id="numero-modificable">0</span></h1>
+        </section>
+
+        <section class="my-5 d-flex gap-5 justify-content-center">
+
+            <!-- Boton para agregar -->
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h6 class="card-subtitle mb-2 text-body-secondary">Aumentador</h6>
+                    <p class="card-text">Presione el boton para agregar una unidad</p>
+                    <div class="text-center">
+                        <button class="btn btn-success" onclick="aumentador()">Agregar número</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Boton para restar -->
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h6 class="card-subtitle mb-2 text-body-secondary">Decrementador</h6>
+                    <p class="card-text">Presione el boton para restar una unidad</p>
+                    <div class="text-center">
+                        <button class="btn btn-danger" onclick="decrementador()">Restar número</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Boton para reiniciar -->
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h6 class="card-subtitle mb-2 text-body-secondary">Reiniciador</h6>
+                    <p class="card-text">Presione el boton para reiniciar el contador</p>
+                    <div class="text-center">
+                        <button class="btn btn-warning" onclick="reseteador()">Reiniciar</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer></footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+</html>
