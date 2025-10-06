@@ -11,7 +11,7 @@
     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="fondo-claro" >
+<body  class="fondo-oscuro" id="elemento-body" >
 
     <header></header>
 
@@ -23,9 +23,9 @@
         <section class="my-5 d-flex gap-5 justify-content-center">
 
             <!-- Boton para agregar -->
-            <div class="card " style="width: 18rem;">
-                <div class="card-body">
-                    <h6 class="card-subtitle mb-2 text-body-secondary">Aumentador</h6>
+            <div class="card fondo-oscuro " style="width: 18rem;" id="card1">
+                <div class="card-body ">
+                    <h6 class="card-subtitle mb-2">Aumentador</h6>
                     <p class="card-text ">Presione el boton para agregar una unidad</p>
                     <div class="text-center">
                         <button class="btn btn-success" onclick="aumentador()">Agregar número</button>
@@ -34,9 +34,9 @@
             </div>
 
             <!-- Boton para restar -->
-            <div class="card" style="width: 18rem;">
+            <div class="card fondo-oscuro" style="width: 18rem;" id="card2">
                 <div class="card-body">
-                    <h6 class="card-subtitle mb-2 text-body-secondary">Decrementador</h6>
+                    <h6 class="card-subtitle mb-2 ">Decrementador</h6>
                     <p class="card-text">Presione el boton para restar una unidad</p>
                     <div class="text-center">
                         <button class="btn btn-danger" onclick="decrementador()">Restar número</button>
@@ -45,15 +45,20 @@
             </div>
 
             <!-- Boton para reiniciar -->
-            <div class="card" style="width: 18rem;">
+            <div class="card fondo-oscuro" style="width: 18rem;" id="card3">
                 <div class="card-body">
-                    <h6 class="card-subtitle mb-2 text-body-secondary">Reiniciador</h6>
+                    <h6 class="card-subtitle mb-2 ">Reiniciador</h6>
                     <p class="card-text">Presione el boton para reiniciar el contador</p>
                     <div class="text-center">
                         <button class="btn btn-warning" onclick="reseteador()">Reiniciar</button>
                     </div>
                 </div>
             </div>
+        </section>
+
+        <section class="d-grid gap-2 justify-content-center">
+            <button class="btn btn-outline-info w-100" type="button" onclick="cambiadorOscuro()">Cambiar modo oscuro</button>
+            <button class="btn btn-outline-info w-100" type="button" onclick="cambiadorClaro()">Cambiar modo claro</button>
         </section>
     </main>
 

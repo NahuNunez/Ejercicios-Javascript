@@ -35,3 +35,33 @@ const reseteador = () =>{
     titulo.innerText = contador
     
 }
+
+const body = document.getElementById("elemento-body") 
+console.log(body);
+
+const divCard1 = document.getElementById("card1")
+const divCard2 = document.getElementById("card2")
+const divCard3 = document.getElementById("card3")
+
+
+
+
+const cambiadorClaro = () => {
+    console.log("Desde la funcion");
+    
+    body.classList.replace("fondo-oscuro", "fondo-claro");
+    divCard1.classList.replace("fondo-oscuro", "fondo-claro");
+    divCard2.classList.replace("fondo-oscuro", "fondo-claro");
+    divCard3.classList.replace("fondo-oscuro", "fondo-claro");
+
+}
+
+const cambiadorOscuro = () => {
+    console.log("Desde la funcion");
+    
+    body.classList.replace("fondo-claro", "fondo-oscuro");
+    divCard1.classList.replace("fondo-claro", "fondo-oscuro");
+    divCard2.classList.replace("fondo-claro", "fondo-oscuro");
+    divCard3.classList.replace("fondo-claro", "fondo-oscuro");
+
+}
