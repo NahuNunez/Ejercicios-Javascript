@@ -66,6 +66,8 @@ const cambiadorOscuro = () => {
 
 }
 
+
+
 const btnCambiarTema = document.querySelector(".btn-dark")
 console.log(btnCambiarTema);
 
