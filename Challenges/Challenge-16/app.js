@@ -65,3 +65,21 @@ const cambiadorOscuro = () => {
     divCard3.classList.replace("fondo-claro", "fondo-oscuro");
 
 }
+
+
+
+const btnCambiarTema = document.querySelector(".btn-dark")
+console.log(btnCambiarTema);
+
+const cambiarTema = () => {
+    const html = document.documentElement;
+
+    const temaActual = html.getAttribute("data-bs-theme")
+    console.log(temaActual);
+
+    html.setAttribute("data-bs-theme", temaActual === "dark" ? "light" : "dark")
+    
+}
+
+
+btnCambiarTema.addEventListener("click",cambiarTema)
