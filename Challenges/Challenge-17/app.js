@@ -52,7 +52,7 @@ setInterval(actualizarReloj, 1000); // cada segundo, se ejecuta actualizarReloj(
 
 
 
-//////////// Lista de Tareas ///////////
+/////////////////////// Lista de Tareas //////////////////////
 
 /* obtengo por id el button */
 const botonTarea = document.getElementById("button-addon2") 
@@ -60,6 +60,57 @@ const botonTarea = document.getElementById("button-addon2")
 /* obtengo por id el div para las tareas */
 const listaTareas = document.getElementById("listaTareas");
 
+let tareas = JSON.parse(localStorage.getItem("tareas")) || []
+
+// 🧩 Función para mostrar tareas en pantalla
+const mostrarTareas = () => {
+  listaTareas.textContent = ""; // limpiar la lista antes de pintarla
+
+  tareas.forEach((texto, numTarea) => {
+    const listGroupItem = document.createElement("div");
+    listGroupItem.className = "list-group-item d-flex justify-content-between align-items-center";
+
+    const tareaContent = document.createElement("span");
+    tareaContent.className = "flex-grow-1";
+    tareaContent.textContent = texto;
+
+    //Checkbox de tarea realizada
+    const checkGroup = document.createElement("div")
+    checkGroup.className = "d-flex mx-3"
+
+    const botonCheck = document.createElement("input")
+    botonCheck.className = "form-check-input mx-3"
+    botonCheck.type = "checkbox"
+    
+    const textoCheck = document.createElement("span")
+    textoCheck.textContent = "Tarea realizada"
+
+    checkGroup.appendChild(botonCheck)
+    checkGroup.appendChild(textoCheck)
+    
+
+    // botón para eliminar tarea
+    const botonBorrar = document.createElement("button");
+    botonBorrar.className = "btn btn-danger btn-sm m-1";
+    botonBorrar.textContent = "Eliminar";
+    botonBorrar.addEventListener("click", () => eliminarTarea(numTarea));
+
+    // Boton para editar una tarea
+    const botonEditar = document.createElement("button");
+    botonEditar.className = "btn btn-warning btn-sm m-1";
+    botonEditar.textContent = "Editar";
+    //botonEditar.addEventListener("click", editarTarea());
+
+    
+    listGroupItem.appendChild(tareaContent);
+    listGroupItem.appendChild(checkGroup)
+    listGroupItem.appendChild(botonBorrar);
+    listGroupItem.appendChild(botonEditar);
+
+
+    listaTareas.appendChild(listGroupItem);
+  });
+};
 
 /* creo la funcion creaTarea que hara toda la logica */
 const crearTarea = () => {
@@ -73,19 +124,86 @@ const crearTarea = () => {
     //creo el contendedor de la tarea
       const listGroupItem = document.createElement("div");
       listGroupItem.className = "list-group-item d-flex justify-content-between align-items-center";
-
       
     //creo el contenido de la tarea
       const tareaContent = document.createElement("span");
       tareaContent.className = "flex-grow-1";
+
       /* con textContent se guarda lo que se escribio en el input */
       tareaContent.textContent = texto;
 
-
       listGroupItem.appendChild(tareaContent);
       listaTareas.appendChild(listGroupItem);
+      
+      tareas.push(texto)
+
+      localStorage.setItem("tareas" , JSON.stringify(tareas))
 
       inputTarea.value = "";
+
+      mostrarTareas()
+
 }
 
- botonTarea.addEventListener("click", crearTarea);
+// 🗑 eliminar tarea por índice
+const eliminarTarea = (numTarea) => {
+  tareas.splice(numTarea, 1); // borrar del array
+  localStorage.setItem("tareas", JSON.stringify(tareas)); // actualizar storage
+  mostrarTareas(); // volver a pintar
+};
+
+mostrarTareas()
+
+botonTarea.addEventListener("click", crearTarea);
+
+
+
+////////////////////////////////////////////////////////////
+
+
+/* const botonTarea = document.getElementById("button-addon2");
+const listaTareas = document.getElementById("listaTareas");
+
+// 🧠 Creamos un array que contenga las tareas ya guardadas o vacío si no hay
+let tareas = JSON.parse(localStorage.getItem("tareas")) || [];
+
+// 🧩 Función para mostrar tareas en pantalla
+const mostrarTareas = () => {
+  listaTareas.textContent = ""; // limpiar la lista antes de pintarla
+
+  tareas.forEach((texto) => {
+    const listGroupItem = document.createElement("div");
+    listGroupItem.className = "list-group-item d-flex justify-content-between align-items-center";
+
+    const tareaContent = document.createElement("span");
+    tareaContent.className = "flex-grow-1";
+    tareaContent.textContent = texto;
+
+    listGroupItem.appendChild(tareaContent);
+    listaTareas.appendChild(listGroupItem);
+  });
+};
+
+// ✨ Función para crear y guardar tarea
+const crearTarea = () => {
+  const inputTarea = document.getElementById("inputTarea");
+  const texto = inputTarea.value.trim();
+
+  if (texto === "") return; // Evita tareas vacías
+
+  // Agregar al array
+  tareas.push(texto);
+
+  // Guardar el array completo en localStorage
+  localStorage.setItem("tareas", JSON.stringify(tareas));
+
+  // Limpiar input y mostrar
+  inputTarea.value = "";
+  mostrarTareas();
+};
+
+// 📦 Mostrar tareas guardadas al iniciar
+mostrarTareas();
+
+// ▶️ Escuchar clic en el botón
+botonTarea.addEventListener("click", crearTarea); */
