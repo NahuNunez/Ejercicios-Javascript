@@ -1,9 +1,11 @@
 
 const Footer = () => {
   return (
-    <div>
-      
-    </div>
+    <>
+      <footer className="bg-secondary text-dark py-4 text-center">
+        <p> &copy; All Rights Reserved </p>
+      </footer>
+    </>
   )
 }
 
