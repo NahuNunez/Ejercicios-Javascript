@@ -11,12 +11,35 @@
     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
-    <header></header>
-    <main>
+    <header class="container">
         <section> <!-- section para el reloj -->
             <div class="container m-5"></div>
         </section>
-    </main>
+    </header>
+
+    <main class="container">
+        <section class="my-5"> <!-- Section para la lista de tareas -->
+            <h2 class="display-5 mb-4 text-center">Lista de Tareas</h2>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Ej: Pasear al perro" aria-label="Recipient’s username" aria-describedby="button-addon2" id="inputTarea">
+                <button class="btn btn-success" type="button" id="button-addon2">Enlistar</button>
+            </div>
+            <div id="listaTareas" class="list-group"></div>
+        </section>
+        <section>
+  <input class="form-check-input" type="checkbox">
+        </section>
+        
+        <!-- <section class="my-5"> Section 2 para la lista de tareas
+            <h2 class="display-5 mb-4 text-center">Lista de Tareas 2</h2>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Ej: Estudiar React" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="inputTarea2">
+                <button class="btn btn-outline-success" id="boton2">Enviar</button>
+            </div>
+            <div id="listaTareas2" class="list-group-item"></div>
+        </section> -->
+    </main> 
+
     <footer></footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
