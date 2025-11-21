@@ -17,6 +17,12 @@
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
+ */
+
+.logo {
+  width: 40px;
+  animation: logo-spin 10s linear infinite;
+}
 
 @keyframes logo-spin {
   from {
@@ -27,6 +33,10 @@
   }
 }
 
+
+
+
+/* 
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
