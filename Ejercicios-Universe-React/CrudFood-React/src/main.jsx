@@ -9,3 +9,5 @@ createRoot(document.getElementById('root')).render(
     <App />
   </StrictMode>,
 )
+
+//El <StrictMode> nos renderiza la pagina y nos avisa si algun componente o dependencia esta mal integrado o importado

@@ -23,6 +23,8 @@ function App() {
 
 export default App
 
+///////////
+
 /*  " <BrowserRouter> " Habilita el sistema de rutas de React Router
 
 Sin BrowserRouter, los componentes <Route>, <Link>, <Navigate>, etc., no funcionarían.
